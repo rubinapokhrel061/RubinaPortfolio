@@ -17,20 +17,26 @@
 } */
 
 * {
-  font-family: "Poppins", sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #e1e6f7;
-  background-color: #100e1e;
+  color: var(--main-clr);
+  background-color: var(--main-bg-clr);
 }
+.light {
+  --main-clr: black;
+  --main-bg-clr: white;
+}
+.dark {
+  --main-clr: #e1e6f7;
+  --main-bg-clr: #100e1e;
+}
+
 .nav-text h1 {
   font-size: 2rem;
-  color: #64ffda;
-
   font-family: "Style Script", cursive;
   font-weight: 500;
   font-style: normal;
@@ -41,9 +47,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap: 15px; */
-  /* margin-top: 100px; */
-  /* font-size: large; */
 }
 .mobile-menu.active {
   opacity: 1;
@@ -52,9 +55,10 @@ body {
 .mobile-menu-container {
   /* width: 85vw; */
   /* height: 100vh; */
-  color: white;
-  background-color: #100e1e;
+  color: var(--main-clr);
   padding: 2rem;
+  margin-bottom: 10px;
+  border-radius: 4px;
 }
 
 .block-container {
@@ -82,7 +86,7 @@ body {
   /* z-index: 1; */
   width: inherit;
   height: inherit;
-  background-color: #100e1e;
+  background-color: var(--menucon-clr);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   transition: 250ms;

@@ -81,14 +81,17 @@ const Skills = () => {
         className="max-w-screen-2xl container mx-auto  px-4 md:px-20 mt-20"
       >
         <div>
-          <div className="py-10 flex flex-col">
-            <h1 className="font-semibold text-xl text-center text-[#64ffda] ">
+          <div className="py-10 flex flex-col ">
+            <h1 className="font-semibold text-xl text-center mt-8 text-[#4c8dd7] dark:text-[#64ffda] ">
               My skills
             </h1>
-            <div className="mt-16  mr-3 grid grid-cols-3 md:grid-cols-6 gap-12">
+            <div className="mt-16 my-5 md:ml-14 grid grid-cols-3 md:grid-cols-4 gap-14 md:gap-16">
               {skillsItem.map(({ id, logo, name }) => (
                 <>
-                  <div className="block-container w-16 h-16 " key={id}>
+                  <div
+                    className="block-container w-16 h-16 hover:scale-110 duration-200 "
+                    key={id}
+                  >
                     <div className="btn-back rounded-xl " />
                     <div className="btn-front rounded-xl flex justify-center items-center">
                       <img
@@ -105,7 +108,6 @@ const Skills = () => {
         </div>
       </div>
       <br></br>
-      <hr />
     </>
   );
 };

@@ -22,7 +22,7 @@ const HomeSec = () => {
           <div className=" mt-12 md:mt-24 space-y-2 order-2 md:order-1">
             <span className="text-base md:text-xl">
               Hello👋, It's Me
-              <h3 className="text-[20px] font-bold md:text-3xl text-[#64ffda]">
+              <h3 className="text-[20px] font-bold md:text-3xl text-[#4c8dd7] dark:text-[#64ffda]">
                 Rubina Pokhrel
               </h3>
             </span>
@@ -31,7 +31,7 @@ const HomeSec = () => {
               <h1>And, I'm a</h1>
 
               <ReactTyped
-                className="text-[#64ffda] font-bold"
+                className="text-[#4c8dd7] dark:text-[#64ffda] font-bold"
                 strings={["Developer", "Programmer", "Coder"]}
                 typeSpeed={40}
                 backSpeed={50}
@@ -54,23 +54,35 @@ const HomeSec = () => {
                 </h1>
                 <ul className="flex space-x-5  ">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
-                      <FaFacebookF className="text-xl text-[#64ffda]  md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
+                    <a
+                      href="https://www.facebook.com/ru.beenaa.35"
+                      target="_blank"
+                    >
+                      <FaFacebookF className="text-xl text-[#4c8dd7] dark:text-[#64ffda]  md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/" target="_blank">
-                      <FaLinkedinIn className="text-xl text-[#64ffda] md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
+                    <a
+                      href="https://www.linkedin.com/in/rubina-pokhrel-a85094275"
+                      target="_blank"
+                    >
+                      <FaLinkedinIn className="text-xl text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/" target="_blank">
-                      <FaInstagram className="text-xl text-[#64ffda] font-extrabold md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
+                    <a
+                      href="https://www.instagram.com/rubina__pokhrel/?igsh=eXJqbmttbWoyeWxj"
+                      target="_blank"
+                    >
+                      <FaInstagram className="text-xl text-[#4c8dd7] dark:text-[#64ffda] font-extrabold md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
                     </a>
                   </li>
                   <li>
-                    <a href="https://t.me/" target="_blank ">
-                      <FaGithub className="text-xl  text-[#64ffda] md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
+                    <a
+                      href="https://github.com/rubinapokhrel061"
+                      target="_blank "
+                    >
+                      <FaGithub className="text-xl  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
                     </a>
                   </li>
                 </ul>
@@ -80,10 +92,10 @@ const HomeSec = () => {
                   Currently working on
                 </h1>
                 <div className="flex space-x-5">
-                  <DiMongodb className="text-xl  text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
-                  <SiExpress className="text-xl  text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
-                  <IoLogoReact className="text-xl  text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
-                  <FaNodeJs className="text-xl t  text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
+                  <DiMongodb className="text-xl  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
+                  <SiExpress className="text-xl  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
+                  <IoLogoReact className="text-xl  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
+                  <FaNodeJs className="text-xl t  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
                 </div>
               </div>
             </div>
@@ -92,8 +104,6 @@ const HomeSec = () => {
       </div>
       <br />
       <br />
-
-      <hr />
     </>
   );
 };
