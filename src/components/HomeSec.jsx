@@ -4,7 +4,7 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
-
+import vectorImg from "../assets/vector.jpg";
 import { DiMongodb } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
 import { IoLogoReact } from "react-icons/io5";
@@ -16,22 +16,21 @@ const HomeSec = () => {
     <>
       <div
         name="Home"
-        className="max-w-screen-2xl container mx-auto mt-52 px-4 md:px-20 md:my-52 my-28 h-3/6"
+        className="max-w-screen-2xl flex container mx-auto mt-52 px-4 md:px-20 md:my-52 my-28 h-3/6"
       >
         <div className="flex flex-col md:flex-row md:justify-center">
           <div className=" mt-12 md:mt-24 space-y-2 order-2 md:order-1">
             <span className="text-base md:text-xl">
               Hello👋, It's Me
-              <h3 className="text-[20px] font-bold md:text-3xl text-[#4c8dd7] dark:text-[#64ffda]">
+              <h3 className="text-[20px] font-bold md:text-3xl text-[#2f9997]">
                 Rubina Pokhrel
               </h3>
             </span>
-
             <div className="flex space-x-1 text-sm md:text-xl">
               <h1>And, I'm a</h1>
 
               <ReactTyped
-                className="text-[#4c8dd7] dark:text-[#64ffda] font-bold"
+                className="text-[#2f9997]  font-bold"
                 strings={["Developer", "Programmer", "Coder"]}
                 typeSpeed={40}
                 backSpeed={50}
@@ -39,7 +38,8 @@ const HomeSec = () => {
               />
             </div>
             <br />
-            <p className="text-base md:text-lg text-justify">
+
+            <p className="text-base tracking-wide text-justify  md:text-lg text-wrap">
               {/* Passisonate Full Stack Developer with a knack for crafting robust
               and scalable web application . */}
               I am a Computer Science Student. I am interested in full-stack web
@@ -58,7 +58,7 @@ const HomeSec = () => {
                       href="https://www.facebook.com/ru.beenaa.35"
                       target="_blank"
                     >
-                      <FaFacebookF className="text-xl text-[#4c8dd7] dark:text-[#64ffda]  md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
+                      <FaFacebookF className="text-xl text-[#2f9997]   md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
                     </a>
                   </li>
                   <li>
@@ -66,7 +66,7 @@ const HomeSec = () => {
                       href="https://www.linkedin.com/in/rubina-pokhrel-a85094275"
                       target="_blank"
                     >
-                      <FaLinkedinIn className="text-xl text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
+                      <FaLinkedinIn className="text-xl text-[#2f9997]  md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
                     </a>
                   </li>
                   <li>
@@ -74,7 +74,7 @@ const HomeSec = () => {
                       href="https://www.instagram.com/rubina__pokhrel/?igsh=eXJqbmttbWoyeWxj"
                       target="_blank"
                     >
-                      <FaInstagram className="text-xl text-[#4c8dd7] dark:text-[#64ffda] font-extrabold md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
+                      <FaInstagram className="text-xl text-[#2f9997]  font-extrabold md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
                     </a>
                   </li>
                   <li>
@@ -82,7 +82,7 @@ const HomeSec = () => {
                       href="https://github.com/rubinapokhrel061"
                       target="_blank "
                     >
-                      <FaGithub className="text-xl  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
+                      <FaGithub className="text-xl  text-[#2f9997]  md:text-3xl hover:scale-110 duration-200   cursor-pointer" />
                     </a>
                   </li>
                 </ul>
@@ -92,10 +92,10 @@ const HomeSec = () => {
                   Currently working on
                 </h1>
                 <div className="flex space-x-5">
-                  <DiMongodb className="text-xl  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
-                  <SiExpress className="text-xl  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
-                  <IoLogoReact className="text-xl  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
-                  <FaNodeJs className="text-xl t  text-[#4c8dd7] dark:text-[#64ffda] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
+                  <DiMongodb className="text-xl  text-[#2f9997] md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
+                  <SiExpress className="text-xl  text-[#2f9997]  md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
+                  <IoLogoReact className="text-xl  text-[#2f9997]  md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
+                  <FaNodeJs className="text-xl t  text-[#2f9997]  md:text-3xl hover:scale-110 duration-200 rounded-full  cursor-pointer" />
                 </div>
               </div>
             </div>

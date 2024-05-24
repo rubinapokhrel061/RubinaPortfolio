@@ -23,16 +23,23 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  color: var(--main-clr);
-  background-color: var(--main-bg-clr);
+  /* color: var(--main-clr);
+  background-color: var(--main-bg-clr); */
+
+  color: #2d3748;
+  background-color: #f8f8f8;
 }
-.light {
+/* .light {
   --main-clr: black;
-  --main-bg-clr: white;
-}
-.dark {
+  --main-bg-clr: #f8f8f8;
+} */
+/* .dark {
   --main-clr: #e1e6f7;
   --main-bg-clr: #100e1e;
+} */
+.dark body {
+  color: #e1e6f7;
+  background-color: #100e1e;
 }
 
 .nav-text h1 {

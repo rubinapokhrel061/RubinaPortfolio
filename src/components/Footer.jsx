@@ -5,7 +5,7 @@ function Footer() {
     <>
       <hr />
       <footer className="py-2 bg-[#CBD5E1] dark:bg-[#112240]">
-        <div className="max-w-screen-2xl container m-auto p-2 md:px-20">
+        <div className="max-w-screen-2xl m-auto p-2 md:px-20">
           <div className=" flex flex-col items-center justify-center">
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/ru.beenaa.35" target="_blank">
