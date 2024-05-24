@@ -1,4 +1,5 @@
 // import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -40,6 +41,7 @@ function App() {
         <Contact />
         <Footer />
       </div>
+      <Toaster />
     </>
   );
 }

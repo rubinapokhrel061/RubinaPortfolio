@@ -2,78 +2,91 @@
 import "./Timeline.css";
 const Timeline = () => {
   return (
-    <div className=" max-w-screen-xl mt-[100px] mx-auto  md:px-14 pt-5 ">
-      <div className="text-center">
-        <h1 className="font-semibold text-xl  text-[#2f9997] inline border-b-2 border-gray-400  ">
-          Timeline
-        </h1>
-        <br />
-        <br />
-        <h1 className="font-semibold text-base   text-[#2f9997] inline   ">
-          My Journey
-        </h1>
-      </div>
-
-      <div className="timeline  relative  mx-auto ">
-        <div className="t-container  left-container pt-2 md:text-right relative  left-0 px-[50px] md:w-[50%]  ">
-          <small className="">2018-2019</small>
-          <span></span>
-          <div className="text-box px-[20px] py-[20px] bg-[#dbe7e7] dark:bg-[#112240] relative rounded-lg text-[15px]">
-            <h3 className="font-medium text-[#2f9997]">Alphabet</h3>
-
-            <p className="text-[13px] ">
-              lorem2 fmnfmnv dnm,dxklkfglks vmvnfgdkjgkj
-            </p>
-            <span
-              className="left-container-arrow h-0 w-0 absolute top-[28px] z-[1] right-[-15px] border-t-[15px]  border-t-transparent border-b-[15px]
-          border-b-transparent border-l-[15px]  border-l-[#dbe7e7] dark:border-l-[#112240] "
-            ></span>
-          </div>
+    <div className="w-full md:h-screen " id="timeline">
+      <div className=" max-w-screen-xl mt-[20px] md:pt-16 sm:mt-28  mx-auto lg:mt-52  md:px-14 pt-5 ">
+        <div className="text-center">
+          <h1 className="font-semibold text-xl  text-[#2f9997] inline border-b-2 border-gray-400  ">
+            TIMELINE
+          </h1>
+          <br />
+          <br />
+          <h1 className="font-semibold text-base   text-[#2f9997] inline   ">
+            My Journey
+          </h1>
         </div>
-        <div className="t-container right-container relative md:left-[50%] py-[5px] px-[50px] md:w-[50%]">
-          <small className="">2018-2019</small>
-          <span></span>
-          <div className="text-box py-[20px] px-[20px] bg-[#dbe7e7] dark:bg-[#112240] relative rounded-lg text-[15px]">
-            <h3 className="font-medium text-[#2f9997] ">Alphabet</h3>
 
-            <p className=" text-[13px] ">
-              lorem2 fmnfmnv dnm,dxklkfglks vmvnfgdkjgkj
-            </p>
-            <span
-              className="right-container-arrow h-0 w-0 absolute top-[28px] z-[1] left-[-15px] border-t-[15px] border-t-transparent border-b-[15px]
-          border-b-transparent border-r-[15px]  border-l-[#dbe7e7] dark:border-l-[#112240]"
-            ></span>
+        <div className="timeline  relative  mx-auto ">
+          <div className="t-container  left-container pt-2 md:text-right relative  left-0 px-[50px] md:w-[50%]  ">
+            <small className="">2075</small>
+            <span></span>
+            <div className="text-box px-[20px] py-[20px] bg-[#dbe7e7] dark:bg-[#112240] relative rounded-lg text-[15px]">
+              <h3 className="font-medium text-[#2f9997]">SEE</h3>
+
+              <p className="text-[13px] ">
+                I passed my secondary education from Shree Manakamana Ratna
+                Ambika Secondary School
+              </p>
+              <span
+                className="left-container-arrow h-0 w-0 absolute top-[28px] z-[1] right-[-15px] border-t-[15px]  border-t-transparent border-b-[15px]
+          border-b-transparent border-l-[15px] border-l-[#dbe7e7] dark:border-l-[#112240] "
+              ></span>
+            </div>
           </div>
-        </div>
-        <div className="t-container left-container md:text-right relative py-[10px] px-[50px] md:w-[50%] ">
-          <small className="">2018-2019</small>
-          <span></span>
+          <div className="t-container right-container relative md:left-[50%] py-[5px] px-[50px] md:w-[50%]">
+            <small className="">2075-2078</small>
+            <span></span>
+            <div className="text-box py-[20px] px-[20px] bg-[#dbe7e7] dark:bg-[#112240] relative rounded-lg text-[15px]">
+              <h3 className="font-medium text-[#2f9997] ">
+                Intermediate Level(+2)
+              </h3>
 
-          <div className="text-box py-[20px] px-[20px] bg-[#dbe7e7] dark:bg-[#112240] relative rounded-lg text-[15px]">
-            <h3 className="font-medium text-[#2f9997] ">Alphabet</h3>
+              <p className=" text-[13px] ">
+                Passed out 12th from Sukuna Secondary School in the year 2078
+              </p>
+              <span
+                className="right-container-arrow h-0 w-0 absolute top-[28px] z-[1] left-[-15px] border-t-[15px] border-t-transparent border-b-[15px]
+                border-b-transparent border-r-[15px]  border-l-[#dbe7e7] dark:border-l-[#112240] dark:md:border-l-[#112240] "
+              ></span>
+            </div>
+          </div>
+          <div className="t-container left-container md:text-right relative py-[10px] px-[50px] md:w-[50%] ">
+            <small className="">2078-2082</small>
+            <span></span>
 
-            <p className="text-[13px]">
-              lorem2 fmnfmnv dnm,dxklkfglks vmvnfgdkjgkj
-            </p>
-            <span
-              className="left-container-arrow h-0 w-0 absolute top-[28px] z-[1] right-[-15px] border-t-[15px]  border-t-transparent border-b-[15px]
+            <div className="text-box py-[20px] px-[20px] bg-[#dbe7e7] dark:bg-[#112240] relative rounded-lg text-[15px]">
+              <h3 className="font-medium text-[#2f9997] ">
+                Bachelor in Bsc.CSIT
+              </h3>
+
+              <p className="text-[13px]">
+                I am currently pursuing a Bachelor Degree in Computer Science &
+                Information Technology at Amrit Science Campus (Tribhuvan
+                University), currently in the 5th semester
+              </p>
+              <span
+                className="left-container-arrow h-0 w-0 absolute top-[28px] z-[1] right-[-15px] border-t-[15px]  border-t-transparent border-b-[15px]
           border-b-transparent border-l-[15px]  border-l-[#dbe7e7] dark:md:border-l-[#112240]"
-            ></span>
+              ></span>
+            </div>
           </div>
-        </div>
-        <div className="t-container right-container relative md:left-[50%] py-[10px] px-[50px] md:w-[50%]">
-          <small className="">2018-2019</small>
-          <span></span>
-          <div className="text-box py-[20px] px-[20px] bg-[#dbe7e7] dark:bg-[#112240] relative rounded-lg text-[15px]">
-            <h3 className="font-medium  text-[#2f9997]">Alphabet</h3>
+          <div className="t-container right-container relative md:left-[50%] py-[10px] px-[50px] md:w-[50%]">
+            <small className="">Present day</small>
+            <span></span>
+            <div className="text-box py-[20px] px-[20px] bg-[#dbe7e7] dark:bg-[#112240] relative rounded-lg text-[15px]">
+              <h3 className="font-medium  text-[#2f9997]">
+                learning Mern Stack web devlopment
+              </h3>
 
-            <p className="text-[13px]">
-              lorem2 fmnfmnv dnm,dxklkfglks vmvnfgdkjgkj
-            </p>
-            <span
-              className="right-container-arrow h-0 w-0 absolute top-[28px] z-[1] left-[-15px] border-t-[15px]  border-t-transparent border-b-[15px]
+              <p className="text-[13px]">
+                Currently I am learning Mern Stack and seeking mern stack
+                developer jobs and internships to expand my experience and
+                knowledge
+              </p>
+              <span
+                className="right-container-arrow h-0 w-0 absolute top-[28px] z-[1] left-[-15px] border-t-[15px]  border-t-transparent border-b-[15px]
           border-b-transparent border-r-[15px]  border-l-[#dbe7e7]  dark:md:border-l-[#112240]"
-            ></span>
+              ></span>
+            </div>
           </div>
         </div>
       </div>

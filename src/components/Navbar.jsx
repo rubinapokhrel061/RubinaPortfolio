@@ -19,40 +19,12 @@ const Navbar = () => {
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
-  // const [openMenu, setOpenMenu] = useState(false);
-  // const toggleMenu = () => {
-  //   setMenu(!menu);
-  // };
-  const navItems = [
-    {
-      id: 1,
-      text: "HOME",
-      path: "/",
-    },
-    {
-      id: 2,
-      text: "ABOUT",
-      path: "/about",
-    },
-    {
-      id: 3,
-      text: "TIMELINE",
-      path: "/timeline",
-    },
-    {
-      id: 4,
-      text: "PROJECT",
-      path: "/project",
-    },
-    {
-      id: 5,
-      text: "CONTACT",
-      path: "/contact",
-    },
-  ];
   return (
     <>
-      <div className="max-w-screen-2xl  mx-0 dark:shadow-sm dark:shadow-slate-500 shadow-sm  px-4  md:px-20 z-10 bg-[#dbe7e7] dark:bg-[#112240] fixed top-0 left-0 right-0">
+      <div
+        data-aos="fade-in"
+        className="max-w-screen-2xl  mx-0 dark:shadow-sm dark:shadow-slate-500 shadow-sm  px-4  md:px-20 z-10 bg-[#dbe7e7] dark:bg-[#112240] fixed top-0 left-0 right-0"
+      >
         <div className="flex justify-between items-center h-20 ">
           <div className="nav-text text-[#2f9997] ">
             <h1>RP</h1>
@@ -61,22 +33,61 @@ const Navbar = () => {
           <div className="flex gap-6">
             <div>
               <ul className="hidden md:flex space-x-8 ">
-                {navItems.map(({ id, text, path }) => (
-                  <li
-                    className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer"
-                    key={id}
+                <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                  <Link
+                    to="home"
+                    spy={true}
+                    offset={-200}
+                    smooth={true}
+                    duration={500}
                   >
-                    <Link
-                      to={path}
-                      spy={true}
-                      offset={50}
-                      smooth={true}
-                      duration={500}
-                    >
-                      {text}
-                    </Link>
-                  </li>
-                ))}
+                    HOME
+                  </Link>
+                </li>
+                <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                  <Link
+                    to="about"
+                    spy={true}
+                    offset={-100}
+                    smooth={true}
+                    duration={500}
+                  >
+                    ABOUT
+                  </Link>
+                </li>
+                <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                  <Link
+                    to="timeline"
+                    spy={true}
+                    offset={-100}
+                    smooth={true}
+                    duration={500}
+                  >
+                    TIMELINE
+                  </Link>
+                </li>
+                <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                  <Link
+                    to="project"
+                    spy={true}
+                    offset={-100}
+                    smooth={true}
+                    duration={500}
+                  >
+                    PROJECT
+                  </Link>
+                </li>
+                <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                  <Link
+                    to="contact"
+                    spy={true}
+                    offset={550}
+                    smooth={true}
+                    duration={500}
+                  >
+                    CONTACT
+                  </Link>
+                </li>
               </ul>
             </div>
             <button className="border-[2px]  rounded-md md:hidden border-[#2f9997] text-[#2f9997] ">
@@ -99,31 +110,68 @@ const Navbar = () => {
         </div>
         {/* mobile navbar */}
         {menu && (
-          <div className="mobile-menu-container bg-[#dfe5ec] dark:bg-[#100e1e] ">
-            {/* <ul className="md:hidde bg-slate-400 text-black h-[700px] w-[300px] flex flex-col  items-center justify-center space-y-5 text-xl">
-              {navItems.map(({ id, text }) => (
-                <li
-                  className=" hover:scale-105 duration-200 cursor-pointer"
-                  key={id}
+          <div className="mobile-menu-container bg-[#cad2db] dark:bg-[#100e1e] ">
+            <ul className="mobile-menu">
+              <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                <Link
+                  to="home"
+                  spy={true}
+                  offset={-200}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setMenu(!menu)}
                 >
-                  {text}
-                </li>
-              ))}
-            </ul> */}
-
-            <ul className="mobile-menu  ">
-              {navItems.map(({ id, text, path }) => (
-                <li className="" key={id}>
-                  <Link
-                    to={path}
-                    onClick={() => setMenu(!menu)}
-                    smooth={true}
-                    duration={500}
-                  >
-                    {text}
-                  </Link>
-                </li>
-              ))}
+                  HOME
+                </Link>
+              </li>
+              <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                <Link
+                  to="about"
+                  spy={true}
+                  offset={-100}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setMenu(!menu)}
+                >
+                  ABOUT
+                </Link>
+              </li>
+              <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                <Link
+                  to="timeline"
+                  spy={true}
+                  offset={-100}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setMenu(!menu)}
+                >
+                  TIMELINE
+                </Link>
+              </li>
+              <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                <Link
+                  to="project"
+                  spy={true}
+                  offset={-100}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setMenu(!menu)}
+                >
+                  PROJECT
+                </Link>
+              </li>
+              <li className=" hover:text-[#2f9997]  hover:scale-105 duration-200 cursor-pointer">
+                <Link
+                  to="contact"
+                  spy={true}
+                  offset={650}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setMenu(!menu)}
+                >
+                  CONTACT
+                </Link>
+              </li>
             </ul>
           </div>
         )}
