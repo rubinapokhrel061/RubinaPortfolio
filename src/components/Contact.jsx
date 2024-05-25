@@ -6,17 +6,18 @@ import toast from "react-hot-toast";
 const Contact = () => {
   const {
     register,
-    // reset,
+    reset,
     handleSubmit,
     // formState: { errors },
   } = useForm();
 
   const onSubmit = async (data, e) => {
     e.preventDefault();
-    useForm.resetFields();
+    reset();
+
     const userData = {
       firstname: data.firstname,
-      lastname: data.firstname,
+      lastname: data.lastname,
       email: data.email,
       message: data.message,
       number: data.number,
@@ -101,7 +102,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full px-4 py-2 text-black font-medium bg-[#2f9997] hover:bg-[#248786]  rounded-lg duration-150"
+              className="w-full px-4 py-2 text-black focus:ring-1 focus:outline-none font-medium bg-[#2f9997] hover:bg-[#248786]  rounded-lg duration-150"
             >
               Send Message
             </button>
