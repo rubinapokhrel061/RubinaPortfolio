@@ -18,9 +18,9 @@ const HomeSec = () => {
         <div className="max-w-screen-2xl flex container mx-auto mt-52 px-4 md:px-20 md:my-52 my-28  w-full h-full">
           <div className="flex flex-col md:flex-row md:justify-center">
             <div className=" mt-12 md:mt-24 space-y-2 order-2 md:order-1">
-              <span className="text-base md:text-xl">
+              <span className="text-[14px] md:text-xl">
                 Hello👋, It's Me
-                <h3 className="text-[20px] font-bold md:text-3xl text-[#2f9997]">
+                <h3 className="text-[18px] font-bold md:text-3xl text-[#2f9997]">
                   Rubina Pokhrel
                 </h3>
               </span>
@@ -37,9 +37,9 @@ const HomeSec = () => {
               </div>
               <br />
 
-              <p className="text-base tracking-wide text-justify  md:text-lg text-wrap">
+              <p className="text-justify text-[14px] mt-5 md:text-[1.1rem] rounded-[.6rem] tracking-[.1px] leading-[1.7]  relative font-[200]">
                 I am a Computer Science Student. I am interested in full-stack
-                web development and also doing competative programming.
+                web development and also doing competitive programming.
               </p>
               <br />
               {/* social media icons */}

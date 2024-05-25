@@ -59,9 +59,9 @@ const Project = () => {
                         {name}
                       </h5>
 
-                      <p className="mb-3 font-normal text-sm md:text-base text-gray-700 dark:text-gray-400">
+                      <div className="text-justify text-[13px] mb-5 tracking-[.1px] leading-[1.3]  relative font-[200] ">
                         {description}
-                      </p>
+                      </div>
                       <a
                         href={pathUrl}
                         target="_blank"

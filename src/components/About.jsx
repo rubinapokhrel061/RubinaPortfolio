@@ -17,30 +17,30 @@ const About = () => {
       <div id="about" className="w-full md:h-screen pt-8 md:mb-96">
         <div
           name="About"
-          className="max-w-screen-2xl container mx-auto mb-5 px-4 md:px-20 pt-5 mt-20  w-full h-1/2"
+          className="max-w-screen-2xl container mx-auto mb-6  px-4 md:px-20 pt-5 mt-20  w-full h-1/2"
         >
-          <div className="rounded-md text-justify text-wrap break-words bg-[#dbe7e7] dark:bg-[#112240]   p-5 ">
+          <div className="rounded-md  bg-[#dbe7e7] dark:bg-[#112240]   p-5 ">
             <br />
             <div className="text-center">
               <h1 className="font-semibold text-xl  text-[#2f9997] inline border-b-2 border-gray-400  ">
                 ABOUT ME
               </h1>
             </div>
-            <p className="tracking-wide text-justify pt-6">
+
+            <div className="text-justify text-[14px] mt-5 rounded-[.6rem] tracking-[.1px] leading-[1.7]  relative font-[200] ">
               Hi there! 👋 I'm Rubina, a passionate MERN stack developer based
               in Nepal. I love building web applications that are both
               functional and visually appealing. I am a beginner developer
               looking for opportunities to expand my skills. I have knowledge of
               Mern stack technologies and I am committed to improving my
               proficiency in these technologies.
-            </p>
-            <br />
-            <p>
-              If you are looking for a motiveted and dedicated full-stack
-              developer,I am available for work opportunities and excited to
+              <br />
+              <br />
+              If you are looking for a motivated and dedicated full-stack
+              developer, I am available for work opportunities and excited to
               contribute to project that allow me to expand my experience and
               knowledge
-            </p>
+            </div>
           </div>
           <br />
           <div name="skills" className="w-full   relative ">
@@ -51,7 +51,7 @@ const About = () => {
                   Skills
                 </p>
                 <p className="py-4 text-left">
-                  These are the technologies I've worked with
+                  These are the technologies I've learn.
                 </p>
               </div>
 
