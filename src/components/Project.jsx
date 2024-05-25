@@ -59,7 +59,7 @@ const Project = () => {
                         {name}
                       </h5>
 
-                      <div className="text-justify text-[13px] mb-5 tracking-[.1px] leading-[1.3]  relative font-[200] ">
+                      <div className="text-justify text-[13px] md:text-[14px] mb-5 tracking-[.1px] leading-[1.3]  relative font-[200] ">
                         {description}
                       </div>
                       <a
