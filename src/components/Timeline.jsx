@@ -22,9 +22,9 @@ const Timeline = () => {
             <div className="text-box px-[20px] py-[20px] bg-[#dbe7e7] dark:bg-[#112240] relative rounded-lg text-[15px]">
               <h3 className="font-medium text-[16px] text-[#2f9997]">SEE</h3>
 
-              <div className="text-justify text-[#000] dark:text-[#fff] text-[14px] mt-5 tracking-[.1px] leading-[1.7]  relative font-[200] ">
+              <div className="text-justify text-[#000] dark:text-[#fff] text-[12px] mt-5 tracking-[.1px] leading-[1.7]  relative font-[200] ">
                 I passed my secondary education from Shree Manakamana Ratna
-                Ambika Secondary School
+                Ambika Secondary School.
               </div>
               <span
                 className="left-container-arrow h-0 w-0 absolute top-[28px] z-[1] right-[-15px] border-t-[15px]  border-t-transparent border-b-[15px]
@@ -40,8 +40,8 @@ const Timeline = () => {
                 Intermediate Level(+2)
               </h3>
 
-              <div className="text-justify text-[#000] dark:text-[#fff] text-[14px] mt-5 tracking-[.1px] leading-[1.7]  relative font-[200] ">
-                Passed out 12th from Sukuna Secondary School in the year 2078
+              <div className="text-justify text-[#000] dark:text-[#fff] text-[12px] mt-5 tracking-[.1px] leading-[1.7]  relative font-[200] ">
+                Passed out 12th from Sukuna Secondary School in the year 2078.
               </div>
               <span
                 className="right-container-arrow h-0 w-0 absolute top-[28px] z-[1] left-[-15px] border-t-[15px] border-t-transparent border-b-[15px]
@@ -58,10 +58,10 @@ const Timeline = () => {
                 Bachelor in Bsc.CSIT
               </h3>
 
-              <div className="text-justify text-[#000] dark:text-[#fff] text-[14px] mt-5 tracking-[.1px] leading-[1.7]  relative font-[200] ">
+              <div className="text-justify text-[#000] dark:text-[#fff] text-[12px] mt-5 tracking-[.1px] leading-[1.7]  relative font-[200] ">
                 I am currently pursuing a Bachelor Degree in Computer Science &
-                Information Technology at Amrit Science Campus (Tribhuvan
-                University), currently in the 5th semester
+                Information Technology at Amrit Science Campus, Tribhuvan
+                University, currently in the 5th semester.
               </div>
               <span
                 className="left-container-arrow h-0 w-0 absolute top-[28px] z-[1] right-[-15px] border-t-[15px]  border-t-transparent border-b-[15px]
@@ -77,10 +77,10 @@ const Timeline = () => {
                 Learning Mern Stack web devlopment
               </h3>
 
-              <div className=" text-[#000] dark:text-[#fff] text-justify text-[14px] mt-5 tracking-[.1px] leading-[1.7]  relative font-[200] ">
+              <div className=" text-[#000] dark:text-[#fff] text-justify text-[12px] mt-5 tracking-[.1px] leading-[1.7]  relative font-[200] ">
                 Currently I am learning Mern Stack and seeking mern stack
                 developer jobs and internships to expand my experience and
-                knowledge
+                knowledge.
               </div>
               <span
                 className="right-container-arrow h-0 w-0 absolute top-[28px] z-[1] left-[-15px] border-t-[15px]  border-t-transparent border-b-[15px]

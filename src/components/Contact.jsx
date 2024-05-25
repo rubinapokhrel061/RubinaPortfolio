@@ -1,16 +1,19 @@
 import axios from "axios";
+
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
 const Contact = () => {
   const {
     register,
+    // reset,
     handleSubmit,
-    formState: { errors },
+    // formState: { errors },
   } = useForm();
 
   const onSubmit = async (data, e) => {
     e.preventDefault();
+    useForm.resetFields();
     const userData = {
       firstname: data.firstname,
       lastname: data.firstname,
@@ -26,6 +29,7 @@ const Contact = () => {
       console.log(error);
     }
   };
+
   return (
     <>
       <div id="contact" className="w-full h-screen sm:h-screen "></div>
@@ -44,56 +48,56 @@ const Contact = () => {
                   {...register("firstname", { required: true })}
                   type="text"
                   name="firstname"
+                  onChange={(e) => e.target.value}
                   required
                   className="w-full mt-2 px-3 py-2  bg-transparent outline-none border focus:border-[#2f9997] border-[#44c2bf] shadow-sm rounded-lg"
                 />
-                {errors.firstname && <span>This field is required</span>}
               </div>
               <div>
                 <label className="font-medium">Last name</label>
                 <input
                   {...register("lastname", { required: true })}
                   type="text"
+                  onChange={(e) => e.target.value}
                   name="lastname"
                   required
                   className="w-full mt-2 px-3 py-2 bg-transparent outline-none border focus:border-[#2f9997] border-[#44c2bf] shadow-sm rounded-lg"
                 />
-                {errors.lastname && <span>This field is required</span>}
+                {/* {errors.lastname && <span>This field is required</span>} */}
               </div>
             </div>
             <div>
               <label className="font-medium">Email</label>
               <input
                 type="email"
+                onChange={(e) => e.target.value}
                 name="email"
                 {...register("email", { required: true })}
                 required
                 className="w-full mt-2 px-3 py-2  bg-transparent outline-none border focus:border-[#2f9997] border-[#44c2bf] shadow-sm rounded-lg"
               />
-              {errors.email && <span>This field is required</span>}
             </div>
             <div>
               <label className="font-medium">Number</label>
               <input
                 type="number"
                 name="number"
+                onChange={(e) => e.target.value}
                 {...register("number", { required: true })}
                 required
                 className="w-full mt-2 px-3 py-2 bg-transparent outline-none border focus:border-[#2f9997] border-[#44c2bf] shadow-sm rounded-lg"
               />
-              {errors.number && <span>This field is required</span>}
             </div>
 
             <div>
               <label className="font-medium">Message</label>
               <textarea
                 required
+                onChange={(e) => e.target.value}
                 {...register("message", { required: true })}
                 name="message"
                 className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-[#2f9997] shadow-sm rounded-lg border-[#44c2bf]"
-              >
-                {errors.message && <span>This field is required</span>}
-              </textarea>
+              ></textarea>
             </div>
             <button
               type="submit"
