@@ -86,13 +86,13 @@ const Project = () => {
                 </div>
               </div>
             </div>
-            <div className="px-6 pt-4 mb-auto">
+            <div className="px-3 sm:px-6 pt-4 mb-auto">
               <h2 className="font-medium text-lg hover:text-indigo-600 transition duration-500 ease-in-out inline-block ">
                 {project.title}
               </h2>
             </div>
-            <div className="px-6 py-2  mb-4 text-gray-500">
-              <div className="border border-gray-300  px-3 inline-block py-1 rounded-3xl">
+            <div className="px-3 sm:px-6 py-2  mb-4 text-gray-500">
+              <div className="border border-gray-300 text-[12px] px-3 inline-block py-1 rounded-3xl">
                 {project.technologies}
               </div>
             </div>
