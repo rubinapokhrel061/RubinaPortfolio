@@ -6,8 +6,7 @@ import Footer from "./components/Footer";
 import HomeSec from "./components/HomeSec";
 import Navbar from "./components/Navbar";
 import Project from "./components/Project";
-
-import Timeline from "./components/Timeline";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -36,7 +35,7 @@ function App() {
         <Navbar />
         <HomeSec />
         <About />
-        <Timeline />
+        <Skills />
         <Project />
         <Contact />
         <Footer />

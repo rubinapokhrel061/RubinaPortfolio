@@ -1,155 +1,87 @@
-import html from "../assets/html.svg";
-import css from "../assets/css.svg";
-import express from "../assets/express-js.svg";
-import javascript from "../assets/javascript.svg";
-import mongodb from "../assets/mongodb.svg";
-import node from "../assets/nodejs.svg";
-import react from "../assets/react.svg";
-import redux from "../assets/redux.svg";
-import tailwindcss from "../assets/tailwindcss.svg";
-import typescript from "../assets/typescript.svg";
-import github from "../assets/github.svg";
+// import intropic from "../assets/rubina1.jpg";
+// const About = () => {
+//   return (
+//     <>
+//       <div id="about" className="w-full ">
+//         <div
+//           name="About"
+//           className="max-w-screen-2xl container  w-[90%] mx-auto pt-20"
+//         >
+//           <div className="flex  justify-evenly gap-x-14">
+//             <div>
+//               <span className=" text-xl uppercase ">Introduction</span>
+//               <h1 className="text-7xl  ">Overview.</h1>
+//               <div className="text-justify text-[14px] mt-5 rounded-[.6rem] tracking-[.1px] leading-[1.7]  relative font-[200]  ">
+//                 Hi there! I’m Rubina Pokhrel, a full-stack developer from Nepal
+//                 with a passion for creating functional and visually appealing
+//                 web applications. I am eager to enhance my skills and gain
+//                 experience in full-stack development.
+//                 <br />
+//                 <br />I am currently seeking opportunities to contribute to
+//                 projects where I can apply my knowledge and grow professionally.
+//                 If you’re looking for a dedicated and enthusiastic developer,
+//                 I’d be excited to discuss how I can contribute to your team or
+//                 project.
+//               </div>
+//             </div>
+//             <div>
+//               <div className="relative w-[400px]">
+//                 <img
+//                   src={intropic}
 
+//                   className="rounded-lg"
+//                   alt="Intro Image"
+//                 />
+//                 <div className="absolute inset-0  rounded-xl bg-gray-900 opacity-25 transition-opacity duration-300 hover:opacity-0" />
+//               </div>
+//             </div>
+//           </div>
+
+//           <br />
+//         </div>
+//       </div>
+//       <br />
+//     </>
+//   );
+// };
+
+// export default About;
+
+import intropic from "../assets/rubina.jpg";
 const About = () => {
-  //bg-[#dbe7e7]
   return (
-    <>
-      <div id="about" className="w-full md:h-screen pt-8 md:mb-96">
-        <div
-          name="About"
-          className="max-w-screen-2xl container mx-auto mb-6  px-4 md:px-20 pt-5 mt-20  w-full h-1/2"
-        >
-          <div className="rounded-md  bg-[#dbe7e7] dark:bg-[#112240]   p-5 ">
-            <br />
-            <div className="text-center">
-              <h1 className="font-semibold text-xl  text-[#2f9997] inline border-b-2 border-gray-400  ">
-                ABOUT ME
-              </h1>
-            </div>
-
-            <div className="text-justify text-[14px] mt-5 rounded-[.6rem] tracking-[.1px] leading-[1.7]  relative font-[200] ">
-              Hi there! 👋 I'm Rubina, a passionate MERN stack developer based
-              in Nepal. I love building web applications that are both
-              functional and visually appealing. I am a beginner developer
-              looking for opportunities to expand my skills. I have knowledge of
-              Mern stack technologies and I am committed to improving my
-              proficiency in these technologies.
+    <div id="about" className="w-full py-20 dark:bg-[#1a1633]">
+      <div name="About" className="max-w-screen-2xl">
+        <div className="flex flex-col md:flex-row md:justify-evenly items-center gap-10 lg:gap-14 w-[85%] mx-auto">
+          <div className="flex-1 order-2 md:order-1 max-w-md md:max-w-md ">
+            <span className="text-base md:text-lg uppercase ">
+              Introduction
+            </span>
+            <h1 className="text-6xl md:text-7xl font-bold">Overview.</h1>
+            <p className="text-justify text-base md:text-lg mt-5 rounded-lg tracking-tight leading-relaxed font-light">
+              Hi there! I’m Rubina Pokhrel, a full-stack developer from Nepal
+              with a passion for creating functional and visually appealing web
+              applications. I am eager to enhance my skills and gain experience
+              in full-stack development.
               <br />
-              <br />
-              If you are looking for a motivated and dedicated full-stack
-              developer, I am available for work opportunities and excited to
-              contribute to project that allow me to expand my experience and
-              knowledge
-            </div>
+              <br />I am currently seeking opportunities to contribute to
+              projects where I can apply my knowledge and grow professionally.
+              If you’re looking for a dedicated and enthusiastic developer, I’d
+              be excited to discuss how I can contribute to your team or
+              project.
+            </p>
           </div>
-          <br />
-          <div name="skills" className="w-full   relative ">
-            {/* Container */}
-            <div className="max-w-[1000px] mx-auto pl-4 flex flex-col justify-center w-full ">
-              <div className="text-center">
-                <p className="text-xl text-[#2f9997] font-bold inline border-b-2 border-gray-400 ">
-                  Skills
-                </p>
-                <p className="py-4 text-left">
-                  These are the technologies I've learn.
-                </p>
-              </div>
-
-              <div className="w-full grid grid-cols-2 sm:grid-cols-4  text-center ">
-                <div className="  hover:scale-110  sm:bg-[#dbe7e7] dark:sm:bg-transparent duration-500">
-                  <img
-                    className="w-14 mt-7 mx-auto"
-                    src={html}
-                    alt="HTML icon"
-                  />
-                  <p className="my-4">HTML</p>
-                </div>
-                <div className="  hover:scale-110 bg-[#dbe7e7]  dark:bg-[#112240] sm:bg-transparent   duration-500">
-                  <img className="w-14 mt-7 mx-auto" src={css} alt="css icon" />
-                  <p className="my-4">CSS</p>
-                </div>
-                <div className=" hover:scale-110 bg-[#dbe7e7] dark:bg-[#112240] dark:sm:bg-transparent duration-500">
-                  <img
-                    className="w-14 mt-7 mx-auto"
-                    src={javascript}
-                    alt="javascript icon"
-                  />
-                  <p className="my-4">JAVASCRIPT</p>
-                </div>
-                <div className=" hover:scale-110 dark:sm:bg-[#112240] duration-500">
-                  <img
-                    className="w-[58px]  mt-5 mx-auto"
-                    src={react}
-                    alt="react icon"
-                  />
-                  <p className="my-4">REACT</p>
-                </div>
-                <div className="  hover:scale-110 dark:sm:bg-[#112240]   duration-500">
-                  <img
-                    className="w-14 mt-7 mx-auto "
-                    src={redux}
-                    alt="redux icon"
-                  />
-                  <p className="my-4">REDUX</p>
-                </div>
-                <div className="  hover:scale-110 bg-[#dbe7e7] dark:bg-[#112240] dark:sm:bg-transparent duration-500 ">
-                  <img
-                    className="w-14 mt-7 mx-auto   dark:bg-[#dbe7e7] dark:rounded-full"
-                    src={github}
-                    alt="github icon"
-                  />
-                  <p className="my-4">GITHUB</p>
-                </div>
-                <div className=" hover:scale-110 bg-[#dbe7e7] sm:bg-transparent dark:bg-[#112240] md:bg-transparent   duration-500">
-                  <img
-                    className="w-14 mt-7 mx-auto"
-                    src={node}
-                    alt="nodejs icon"
-                  />
-                  <p className="my-4">NODE JS</p>
-                </div>
-                <div className="  hover:scale-110   sm:bg-[#dbe7e7] dark:sm:bg-transparent duration-500">
-                  <img
-                    className="w-14 mt-7 mx-auto"
-                    src={mongodb}
-                    alt="mongodb icon"
-                  />
-                  <p className="my-4">MONGO DB</p>
-                </div>
-                <div className=" hover:scale-110   sm:bg-[#dbe7e7] dark:sm:bg-transparent  duration-500">
-                  <img
-                    className="w-14 mt-7 mx-auto "
-                    src={tailwindcss}
-                    alt="Tailwind icon"
-                  />
-                  <p className="my-4 mt-8">TAILWIND</p>
-                </div>
-                <div className="  hover:scale-110 bg-[#dbe7e7] sm:bg-transparent dark:bg-[#112240] dark:md:bg-transprant md:bg-transparent duration-500">
-                  <img
-                    className="w-14 mt-6  mx-auto"
-                    src={express}
-                    alt="Express icon"
-                  />
-                  <p className="my-4">EXPRESS</p>
-                </div>
-
-                <div className=" hover:scale-110 bg-[#dbe7e7] dark:bg-[#112240]  dark:sm:bg-transparent duration-500">
-                  <img
-                    className="w-14 mt-7 mx-auto"
-                    src={typescript}
-                    alt="HTML icon"
-                  />
-                  <p className="my-4">TYPESCRIPT</p>
-                </div>
-              </div>
-            </div>
+          <div className="flex-1 order-1 md:order-2 relative w-full max-w-xs">
+            <img
+              src={intropic}
+              className="w-full h-auto max-w-xs rounded-lg"
+              alt="Intro Image"
+            />
+            <div className="absolute inset-0 rounded-lg bg-gray-900 opacity-25 transition-opacity duration-300 hover:opacity-0" />
           </div>
-
-          <br />
         </div>
       </div>
-      <br />
-    </>
+    </div>
   );
 };
 

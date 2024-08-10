@@ -1,118 +1,106 @@
-import axios from "axios";
+// import { FaGithub, FaLinkedin } from "react-icons/fa";
+// import { MdEmail } from "react-icons/md";
+// import contactImage from "../assets/contact.jpg";
+// const Contact = () => {
+//   return (
+//     <>
+//       <div id="contact" className="w-full my-20">
+//         <div className="flex flex-col md:flex md:flex-row md:justify-between gap-7 w-[80%] mx-auto">
+//           <div className=" rounded-lg p-12 bg-gray-100 dark:bg-[#1a1633] md:w-1/2 ">
+//             <span className="text-base md:text-lg uppercase ">
+//               Get In Touch
+//             </span>
+//             <h1 className="text-6xl md:text-7xl font-bold ">Contact.</h1>
+//             <div className="flex gap-4 justify-center py-10 ">
+//               <a
+//                 href="pokhrelrubina2061@gmail.com"
+//                 target="_blank"
+//                 className="border cursor-pointer border-gray-300 rounded-md items-center px-3 py-2 flex gap-2"
+//               >
+//                 <span>Email</span>
+//                 <MdEmail />
+//               </a>
+//               <a
+//                 href="https://www.linkedin.com/in/rubina-pokhrel-a85094275"
+//                 target="_blank"
+//                 className="border cursor-pointer border-gray-300 rounded-md items-center px-3 py-2 flex gap-2"
+//               >
+//                 <span>Linkedin</span>
+//                 <FaLinkedin />
+//               </a>
+//               <a
+//                 href="https://github.com/rubinapokhrel061"
+//                 target="_blank"
+//                 className="border cursor-pointer border-gray-300 rounded-md items-center px-3 py-2 flex gap-2"
+//               >
+//                 <span>GitHub</span>
+//                 <FaGithub />
+//               </a>
+//             </div>
+//           </div>
+//           <div className="md:w-1/2">
+//             <img
+//               src={contactImage}
+//               className=" float-end rounded-lg"
+//               alt="contact us"
+//             ></img>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+// export default Contact;
 
-import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import contactImage from "../assets/contact.jpg";
 
 const Contact = () => {
-  const {
-    register,
-    reset,
-    handleSubmit,
-    // formState: { errors },
-  } = useForm();
-
-  const onSubmit = async (data, e) => {
-    e.preventDefault();
-    reset();
-
-    const userData = {
-      firstname: data.firstname,
-      lastname: data.lastname,
-      email: data.email,
-      message: data.message,
-      number: data.number,
-    };
-    try {
-      await axios.post("https://getform.io/f/pbqgdjrb", userData),
-        toast.success("your message send sucessfully");
-    } catch (error) {
-      toast.error("Something Went Wrong");
-      console.log(error);
-    }
-  };
-
   return (
-    <>
-      <div id="contact" className="w-full h-screen sm:h-screen "></div>
-      <div className=" mx-10 ">
-        <div className="max-w-lg mx-auto mt-16 lg:mt-4 sm:mt-1 text-center">
-          <h1 className="font-semibold text-base  top-5  text-[#2f9997] inline border-b-2 border-gray-400">
-            CONTACT ME
-          </h1>
-        </div>
-        <div className="  mt-12 max-w-lg p-5 bg-[#dbe7e7] dark:bg-[#112240] rounded-xl mx-auto ">
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-            <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
-              <div>
-                <label className="font-medium">First name</label>
-                <input
-                  {...register("firstname", { required: true })}
-                  type="text"
-                  name="firstname"
-                  onChange={(e) => e.target.value}
-                  required
-                  className="w-full mt-2 px-3 py-2  bg-transparent outline-none border focus:border-[#2f9997] border-[#44c2bf] shadow-sm rounded-lg"
-                />
-              </div>
-              <div>
-                <label className="font-medium">Last name</label>
-                <input
-                  {...register("lastname", { required: true })}
-                  type="text"
-                  onChange={(e) => e.target.value}
-                  name="lastname"
-                  required
-                  className="w-full mt-2 px-3 py-2 bg-transparent outline-none border focus:border-[#2f9997] border-[#44c2bf] shadow-sm rounded-lg"
-                />
-                {/* {errors.lastname && <span>This field is required</span>} */}
-              </div>
-            </div>
-            <div>
-              <label className="font-medium">Email</label>
-              <input
-                type="email"
-                onChange={(e) => e.target.value}
-                name="email"
-                {...register("email", { required: true })}
-                required
-                className="w-full mt-2 px-3 py-2  bg-transparent outline-none border focus:border-[#2f9997] border-[#44c2bf] shadow-sm rounded-lg"
-              />
-            </div>
-            <div>
-              <label className="font-medium">Number</label>
-              <input
-                type="number"
-                name="number"
-                onChange={(e) => e.target.value}
-                {...register("number", { required: true })}
-                required
-                className="w-full mt-2 px-3 py-2 bg-transparent outline-none border focus:border-[#2f9997] border-[#44c2bf] shadow-sm rounded-lg"
-              />
-            </div>
-
-            <div>
-              <label className="font-medium">Message</label>
-              <textarea
-                required
-                onChange={(e) => e.target.value}
-                {...register("message", { required: true })}
-                name="message"
-                className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-[#2f9997] shadow-sm rounded-lg border-[#44c2bf]"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full px-4 py-2 text-black border focus:ring-1 focus:outline-none  font-medium bg-[#2f9997] hover:bg-[#1e8280]  rounded-lg duration-150"
+    <div id="contact" className="w-full my-20">
+      <div className="flex flex-col md:flex-row md:justify-between gap-7 w-[80%] mx-auto">
+        <div className="rounded-lg p-12 bg-gray-100 dark:bg-[#1a1633] md:w-1/2">
+          <span className="text-base md:text-lg uppercase">Get In Touch</span>
+          <h1 className="text-6xl md:text-7xl font-bold">Contact.</h1>
+          <div className="flex gap-4 justify-center py-10">
+            <a
+              href="mailto:pokhrelrubina2061@gmail.com"
+              className="border cursor-pointer border-gray-300 rounded-md items-center px-3 py-2 flex gap-2"
             >
-              Send Message
-            </button>
-          </form>
+              <span>Email</span>
+              <MdEmail />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rubina-pokhrel-a85094275"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border cursor-pointer border-gray-300 rounded-md items-center px-3 py-2 flex gap-2"
+            >
+              <span>LinkedIn</span>
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/rubinapokhrel061"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border cursor-pointer border-gray-300 rounded-md items-center px-3 py-2 flex gap-2"
+            >
+              <span>GitHub</span>
+              <FaGithub />
+            </a>
+          </div>
         </div>
-        {/* </div> */}
+        <div className="md:w-1/2">
+          <img
+            src={contactImage}
+            className="float-end rounded-lg"
+            alt="contact us"
+          />
+        </div>
       </div>
-
-      <br></br>
-    </>
+    </div>
   );
 };
+
 export default Contact;
