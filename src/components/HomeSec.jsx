@@ -8,7 +8,7 @@ const HomeSec = () => {
           <span className="text-xl md:text-3xl animate-zoomIn text-gray-800">
             Hello👋, It's Me
           </span>
-          <h3 className="text-7xl font-bold md:text-8xl lg:text-9xl font-serif  animate-zoomIn">
+          <h3 className="text-[80px] leading-[1] font-bold md:text-8xl lg:text-9xl font-serif  animate-zoomIn">
             Rubina Pokhrel
           </h3>
           <div className="flex space-x-2 justify-center text-xl md:text-3xl text-gray-800">
