@@ -38,7 +38,7 @@ const Project = () => {
   return (
     <div
       id="project"
-      className="w-full py-12 min-h-screen border border-green-300"
+      className="w-full py-20 min-h-screen border border-green-300"
     >
       <div className="w-[90%] mx-auto mb-12 text-center">
         <span className="text-base md:text-lg uppercase text-indigo-600">

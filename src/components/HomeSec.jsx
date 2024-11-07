@@ -4,7 +4,7 @@ const HomeSec = () => {
   return (
     <>
       <div id="home" className="w-full min-h-screen  bg-[#beecc9] ">
-        <div className="flex flex-col gap-3  absolute text-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <div className="flex flex-col gap-3  absolute text-center top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           <span className="text-xl md:text-3xl animate-zoomIn text-gray-800">
             Hello👋, It's Me
           </span>

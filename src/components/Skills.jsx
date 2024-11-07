@@ -71,7 +71,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen py-10  border border-green-300"
+      className="min-h-screen py-20  border border-green-300"
     >
       <div className="container mx-auto px-4">
         <h1 className="text-5xl text-center font-bold text-gray-900 mb-8">
