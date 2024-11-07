@@ -1,48 +1,59 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import contactImage from "../assets/contact.jpg";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full my-20">
-      <div className="flex flex-col md:flex-row md:justify-between gap-7 w-[85%] sm:w-[80%] mx-auto">
-        <div className="rounded-lg py-12 px-2 sm:p-12 text-center sm:text-start bg-gray-100 dark:bg-[#1a1633] md:w-1/2">
-          <span className="text-base md:text-lg uppercase">Get In Touch</span>
-          <h1 className="text-6xl md:text-7xl font-bold">Contact.</h1>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-5 py-10">
+    <div
+      id="contact"
+      className="w-full pt-20 pb-14  min-h-[85vh] md:min-h-[75vh]"
+    >
+      <div className="flex flex-col items-center justify-center w-[90%] sm:w-[85%] mx-auto">
+        <div className="bg-white shadow-2xl rounded-lg p-8 md:p-12 text-center sm:text-left w-full max-w-2xl">
+          <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 uppercase mb-4">
+            Let's Connect
+          </h2>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-6">
+            Contact Me
+          </h1>
+          <p className="text-gray-600 dark:text-gray-300 mb-8">
+            Feel free to reach out to me through any of the following platforms.
+            I'd love to hear from you!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center sm:justify-start">
             <a
               href="mailto:pokhrelrubina2061@gmail.com"
-              className="border cursor-pointer border-gray-300 rounded-md flex justify-center items-center w-full sm:w-auto px-3 py-2  gap-2"
+              className="group border cursor-pointer border-gray-300 rounded-md w-full sm:w-auto px-6 py-3 flex justify-center items-center gap-3 text-gray-900 bg-white hover:bg-indigo-600 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              <span>Email</span>
-              <MdEmail />
+              <MdEmail className="text-2xl group-hover:text-white" />
+              <span className="text-lg font-medium group-hover:text-white">
+                Email
+              </span>
             </a>
+
             <a
               href="https://www.linkedin.com/in/rubina-pokhrel-a85094275"
               target="_blank"
               rel="noopener noreferrer"
-              className="border cursor-pointer w-full sm:w-auto flex justify-center items-center  border-gray-300 rounded-md r px-3 py-2 gap-2"
+              className="group border cursor-pointer w-full sm:w-auto px-6 py-3 flex justify-center items-center gap-3 border-gray-300 rounded-md text-gray-900 bg-white hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              <span>LinkedIn</span>
-              <FaLinkedin />
+              <FaLinkedin className="text-2xl group-hover:text-white" />
+              <span className="text-lg font-medium group-hover:text-white">
+                LinkedIn
+              </span>
             </a>
+
             <a
               href="https://github.com/rubinapokhrel061"
               target="_blank"
               rel="noopener noreferrer"
-              className="border cursor-pointer w-full sm:w-auto border-gray-300 rounded-md flex justify-center items-center px-3 py-2  gap-2"
+              className="group border cursor-pointer w-full sm:w-auto px-6 py-3 flex justify-center items-center gap-3 border-gray-300 rounded-md text-gray-900 bg-white hover:bg-gray-800 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              <span>GitHub</span>
-              <FaGithub />
+              <FaGithub className="text-2xl group-hover:text-white" />
+              <span className="text-lg font-medium group-hover:text-white">
+                GitHub
+              </span>
             </a>
           </div>
-        </div>
-        <div className="md:w-1/2">
-          <img
-            src={contactImage}
-            className="float-end rounded-lg"
-            alt="contact us"
-          />
         </div>
       </div>
     </div>
