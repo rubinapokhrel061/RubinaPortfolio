@@ -2,9 +2,18 @@ import { FaGithub } from "react-icons/fa";
 import { LuExternalLink } from "react-icons/lu";
 import Digitalshop from "../assets/digitalshop.jpg";
 import filesharing from "../assets/fileshare.jpg";
-import Lms from "../assets/LMS.png";
+import quickbasket from "../assets/quickbasket.png";
 
 const projects = [
+  {
+    title: "Quick Basket",
+    technologies: "React, Express, Node.js, mySql,reduxJs/toolkit",
+    imageSrc: quickbasket,
+    links: {
+      live: "https://quick-basket-ecommercesite.vercel.app/",
+      github: "https://github.com/rubinapokhrel061/EcommerceCustomerSide",
+    },
+  },
   {
     title: "Digital Shop",
     technologies: "React, Express, Node.js, MongoDB",
@@ -21,15 +30,6 @@ const projects = [
     links: {
       live: "https://file-sharing-clientside.vercel.app/",
       github: "https://github.com/rubinapokhrel061/File_sharing_clientside",
-    },
-  },
-  {
-    title: "Book Store",
-    technologies: "React, Express, Node.js, MongoDB",
-    imageSrc: Lms,
-    links: {
-      live: "https://lms-clientside.vercel.app/",
-      github: "https://github.com/rubinapokhrel061/LMS_clientside",
     },
   },
 ];

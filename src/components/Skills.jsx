@@ -77,7 +77,7 @@ const Skills = () => {
         <h1 className="text-5xl text-center font-bold text-gray-900 mb-8">
           Skills.
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-8 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-8 justify-items-center">
           {skills.map((skill, index) => (
             <div
               key={index}
