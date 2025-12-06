@@ -80,18 +80,19 @@ const Contact = () => {
           <div className="mb-12 md:mb-16">
             <div className="inline-block">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent mb-3">
-                Let's Connect
+                Let&apos;s Connect
               </h2>
               <div className="h-1.5 bg-gradient-to-r from-primary via-primary/60 to-transparent rounded-full"></div>
             </div>
             <p className="mt-4 text-slate-600 text-lg max-w-2xl">
-              Have a project in mind? Let's discuss how we can work together.
+              Have a project in mind? Let&apos;s discuss how we can work
+              together.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-x-12">
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl shadow-slate-200/50 p-8  border border-slate-200 ">
+              <div className="bg-white rounded-2xl shadow-slate-200/50 p-3 md:p-8  border border-slate-200 ">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -186,7 +187,8 @@ const Contact = () => {
                         />
                       </div>
                       <p className="text-emerald-700 font-medium">
-                        Message sent successfully! I'll get back to you soon.
+                        Message sent successfully! I&apos;ll get back to you
+                        soon.
                       </p>
                     </div>
                   )}
@@ -203,7 +205,7 @@ const Contact = () => {
             </div>
 
             <div className="lg:col-span-2 space-y-6">
-              <div className="bg-white rounded-2xl border border-slate-200 p-6">
+              <div className="bg-white rounded-2xl border border-slate-200 p-3 md:p-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-4">
                   Connect With Me
                 </h3>

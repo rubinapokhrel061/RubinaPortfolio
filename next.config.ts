@@ -1,18 +1,11 @@
 import type { NextConfig } from "next";
 
-// No static export, server mode
 const nextConfig: NextConfig = {
-  // Remove `output: "export"` to allow `npm start`
-
-  // Optional: basePath only if deploying to a subfolder
-  // basePath: "/Resume-Nextjs",
-  // assetPrefix: "/Resume-Nextjs",
-
+  // output: "export",
   images: {
     unoptimized: true,
   },
-
-  trailingSlash: true, // optional, can keep or remove
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
