@@ -1,20 +1,20 @@
 import type { NextConfig } from "next";
 
-const basePath = process.env.NODE_ENV === "production" ? "/Resume-Nextjs" : "";
-
+// No static export, server mode
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath,
-  assetPrefix: basePath,
+  // Remove `output: "export"` to allow `npm start`
+
+  // Optional: basePath only if deploying to a subfolder
+  // basePath: "/Resume-Nextjs",
+  // assetPrefix: "/Resume-Nextjs",
+
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
+
+  trailingSlash: true, // optional, can keep or remove
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 };
 
