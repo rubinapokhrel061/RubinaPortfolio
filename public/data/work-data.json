@@ -1,0 +1,26 @@
+{
+  "workData": [
+    {
+      "title": "TinyBee1 Portal",
+
+      "image": "/images/work/tinybee1.png",
+
+      "contribution": "Contributed to feature enhancements, bug fixes, and UI improvements.",
+      "link": "https://tinybee1.bizhub.com.np/"
+    },
+    {
+      "title": "Pals Cargo Website",
+
+      "image": "/images/work/pals-cargo.png",
+
+      "contribution": "Developed courier services features including booking, tracking, and shipment management.",
+      "link": "https://main.d2snye6ojrr7uc.amplifyapp.com/"
+    },
+    {
+      "title": "Karigari Pvt. Ltd",
+      "image": "/images/work/karigari.png",
+      "contribution": "Developed a complete full-stack e-commerce system with product management, user authentication, and secure payment integration using Stripe and PayPal",
+      "link": "https://www.karigari.com.au/"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "contactBar": {
+    "contactItems": [
+      {
+        "type": "email",
+        "label": "pokhrelrubina2061@gmail.com",
+        "icon": "/images/icon/mail-icon.svg",
+        "link": "mailto:pokhrelrubina2061@gmail.com"
+      },
+      {
+        "type": "phone",
+        "label": "+977 9862122655",
+        "icon": "/images/icon/call-icon.svg",
+        "link": "tel:+9779862122655"
+      },
+      {
+        "type": "website",
+        "label": "www.rubinapokhrel61.com.np",
+        "icon": "/images/icon/web-icon.svg",
+        "link": "https://www.rubinapokhrel61.com.np/"
+      }
+    ],
+    "socialItems": [
+      {
+        "platform": "GitHub",
+        "icon": "/images/icon/github.svg",
+        "link": "https://github.com/rubinapokhrel061"
+      },
+      {
+        "platform": "LinkedIn",
+        "icon": "/images/icon/linkedin.svg",
+        "link": "https://www.linkedin.com/in/rubina-pokhrel-a85094275/"
+      },
+      {
+        "platform": "Instagram",
+        "icon": "/images/icon/instagram.svg",
+        "link": "https://www.instagram.com/rubina__pokhrel/"
+      }
+    ]
+  },
+  "educationData": {
+    "education": [
+      {
+        "title": "Sukuna Secondary School - 2022",
+        "description": "Completed +2 in Science, achieving strong foundation in mathematics and computer science."
+      },
+      {
+        "title": "Bachelor of Science in CSIT - 2022 to Present",
+        "description": "Pursuing BSc in Computer Science and Information Technology at Amrit Science Campus, Kathmandu."
+      },
+      {
+        "title": "Professional Certifications",
+        "description": "Completed MERN Stack Development training with hands-on projects, including React, Node.js, MongoDB, and Next.js."
+      }
+    ],
+    "skills": [
+      {
+        "name": "React.js",
+        "icon": "/images/home/education-skill/react-icon.svg",
+        "rating": 5
+      },
+      {
+        "name": "Next.js",
+        "icon": "/images/home/education-skill/nextjs-icon.svg",
+        "rating": 5
+      },
+      {
+        "name": "Node.js",
+        "icon": "/images/home/education-skill/nodejs-icon.svg",
+        "rating": 4
+      },
+      {
+        "name": "MongoDB",
+        "icon": "/images/home/education-skill/mongodb-icon.svg",
+        "rating": 5
+      },
+      {
+        "name": "MySQL",
+        "icon": "/images/home/education-skill/mysql-icon.svg",
+        "rating": 4
+      },
+      {
+        "name": "Docker",
+        "icon": "/images/home/education-skill/docker-icon.svg",
+        "rating": 4
+      }
+    ]
+  },
+  "contactLinks": {
+    "socialLinks": [
+      {
+        "platform": "GitHub",
+        "icon": "/images/icon/github.svg",
+        "link": "https://github.com/rubinapokhrel061"
+      },
+      {
+        "platform": "LinkedIn",
+        "icon": "/images/icon/linkedin.svg",
+        "link": "https://www.linkedin.com/in/rubina-pokhrel-a85094275/"
+      },
+      {
+        "platform": "Instagram",
+        "icon": "/images/icon/instagram.svg",
+        "link": "https://www.instagram.com/rubina__pokhrel/"
+      }
+    ],
+    "contactItems": [
+      {
+        "type": "email",
+        "label": "pokhrelrubina2061@gmail.com",
+        "icon": "/images/icon/mail-icon.svg",
+        "link": "mailto:pokhrelrubina2061@gmail.com"
+      },
+      {
+        "type": "phone",
+        "label": "+977 9862122655",
+        "icon": "/images/icon/call-icon.svg",
+        "link": "tel:+9779862122655"
+      },
+      {
+        "type": "website",
+        "label": "www.rubinapokhrel61.com.np",
+        "icon": "/images/icon/web-icon.svg",
+        "link": "https://www.rubinapokhrel61.com.np/"
+      }
+    ]
+  }
+}
