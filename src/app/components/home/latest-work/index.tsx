@@ -29,10 +29,10 @@ const LatestWork = () => {
         <div className="container">
           <div className="py-16 xl:py-32">
             <div className="inline-block pb-7 mb-9 md:mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent mb-3">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-linear-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent mb-3">
                 Latest Works
               </h2>
-              <div className="h-1.5 bg-gradient-to-r from-primary via-primary/60 to-transparent rounded-full"></div>
+              <div className="h-1.5 bg-linear-to-r from-primary via-primary/60 to-transparent rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 xl:gap-y-12">
               {workData?.map((value: any, index: number) => (
