@@ -1,60 +1,169 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-display: var(--font-bricolage), system-ui, sans-serif;
-  --font-sans: var(--font-plex), system-ui, sans-serif;
-}
-@theme {
-  --color-ink: #1e1b4b;
-  --color-brand: #4f46e5;
-  --color-paper: #f5f5ff;
-  --color-line: #e3e1f5;
-  --color-muted: #4b4a6b;
-  --breakpoint-xs: 425px;
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-body { @apply bg-white font-sans text-ink antialiased; }
-h1, h2, h3 { @apply font-display tracking-tight; }
-:focus-visible { outline: 3px solid var(--color-brand); outline-offset: 3px; }
+/* Dark-first: the default palette is dark. Light mode is opt-in via data-theme. */
+:root {
+  --bg: #08080a;
+  --surface: #0e0e12;
+  --surface-2: #141419;
+  --ink: #f4f4f6;
+  --muted: #a2a2ae;
+  --faint: #6b6b77;
+  --line: #1e1e27;
+  --line-strong: #2b2b36;
+  --brand: #818cf8;
+  --brand-strong: #a5b4fc;
+  --brand-soft: rgba(129, 140, 248, 0.13);
+  --accent: #a78bfa;
+  --success: #34d399;
+  --glow-brand: rgba(99, 102, 241, 0.22);
+  --glow-accent: rgba(139, 92, 246, 0.18);
+  --code-bg: #0b0b10;
+  --code-ink: #e6e6ee;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 12px 32px -16px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f4f4f6;
+  --ink: #0c0c10;
+  --muted: #565665;
+  --faint: #90909e;
+  --line: #e8e8ef;
+  --line-strong: #d6d6e1;
+  --brand: #4f46e5;
+  --brand-strong: #4338ca;
+  --brand-soft: #eef2ff;
+  --accent: #7c3aed;
+  --success: #059669;
+  --glow-brand: rgba(99, 102, 241, 0.16);
+  --glow-accent: rgba(139, 92, 246, 0.14);
+  --code-bg: #0b0b10;
+  --code-ink: #e6e6ee;
+  --shadow-card: 0 1px 2px rgba(16, 16, 24, 0.04), 0 8px 24px -12px rgba(16, 16, 24, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-bg font-sans text-ink antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display tracking-tight;
+}
+
+::selection {
+  background: var(--brand);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 
 @layer utilities {
   .container { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
-  .section { @apply py-20 md:py-28; }
-  .btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition-colors; }
-  .btn-primary { @apply bg-brand text-white hover:bg-ink; }
-  .btn-ghost { @apply border border-ink/20 text-ink hover:border-ink hover:bg-ink hover:text-white; }
-  .chip { @apply rounded-full border border-line bg-white px-3 py-1 text-sm text-muted; }
+  .section { @apply py-24 md:py-32; }
+
+  .eyebrow { @apply font-mono text-xs font-medium uppercase tracking-[0.22em] text-brand; }
+
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition; }
+  .btn-primary {
+    @apply bg-brand text-white;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 10px 24px -12px var(--glow-brand);
+  }
+  .btn-primary:hover { background: var(--brand-strong); }
+  .btn-ghost { @apply border border-line-strong text-ink; }
+  .btn-ghost:hover { border-color: var(--brand); background: var(--brand-soft); color: var(--brand); }
+
+  .card {
+    @apply rounded-2xl border border-line bg-surface;
+    box-shadow: var(--shadow-card);
+  }
+
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1 text-sm text-muted; }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 54px 54px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 25%, transparent 75%);
+  }
+
+  .gradient-text {
+    background-image: linear-gradient(100deg, var(--brand) 0%, var(--accent) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
+  .rise, .reveal { opacity: 1 !important; transform: none !important; }
 }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.rise { opacity: 0; animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+.marquee-track { animation: marquee 36s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.bob { animation: bob 6s ease-in-out infinite; }
+.status-dot { animation: pulse-soft 2.4s ease-in-out infinite; }
+
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.reveal.in { opacity: 1; transform: none; }
 
 @media print {
-  header, footer, .no-print { display: none !important; }
-  .section { padding-block: 1.5rem; }
-  a { text-decoration: none; }
+  header, footer { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .no-print { display: none !important; }
+  .resume-sheet { box-shadow: none !important; border: none !important; margin: 0 !important; width: 100% !important; max-width: none !important; border-radius: 0 !important; background: #fff !important; color: #111 !important; }
+  .resume-sheet * { color: #111 !important; }
 }
-
-@keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
-@keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(40px,-30px) scale(1.15); } }
-@keyframes marquee { to { transform: translateX(-50%); } }
-@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-
-.rise { opacity: 0; animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
-.drift { animation: drift 14s ease-in-out infinite; }
-.bob { animation: bob 6s ease-in-out infinite; }
-.marquee-track { animation: marquee 38s linear infinite; }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-.grid-bg { background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse at 30% 40%, #000 30%, transparent 75%); }
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
-.reveal.in { opacity: 1; transform: none; }
-.btn-light { @apply border border-white/30 text-white hover:bg-white hover:text-ink; }
-@media (prefers-reduced-motion: reduce) { .rise, .reveal { opacity: 1 !important; transform: none !important; } }
-
-@keyframes sweep { to { background-position: 200% 0; } }
-.card { @apply relative rounded-3xl border border-line bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-xl hover:shadow-brand/10; }
-.sweep { background-image: linear-gradient(110deg, var(--color-brand) 20%, #a78bfa 40%, var(--color-brand) 60%); background-size: 200% 100%; animation: sweep 5s linear infinite; }
-.tag-float { animation: bob 5s ease-in-out infinite; }

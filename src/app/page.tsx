@@ -1,7 +1,7 @@
 import Hero from "./components/hero";
 import Marquee from "./components/marquee";
 import About from "./components/about";
-import Work from "./components/work";
+import Projects from "./components/projects";
 import Experience from "./components/experience";
 import Skills from "./components/skills";
 import Contact from "./components/contact";
@@ -12,7 +12,7 @@ export default function Page() {
       <Hero />
       <Marquee />
       <About />
-      <Work />
+      <Projects />
       <Experience />
       <Skills />
       <Contact />

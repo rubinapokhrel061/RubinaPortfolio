@@ -3,17 +3,50 @@ import { EXPERIENCE } from "@/data/site";
 
 export default function Experience() {
   return (
-    <section id="experience" aria-labelledby="exp-title" className="section bg-paper">
+    <section id="experience" aria-labelledby="experience-title" className="section">
       <div className="container">
-        <h2 id="exp-title" className="text-4xl font-bold md:text-5xl">Experience</h2>
-        <ol className="mt-12 border-l-2 border-line">
+        <Reveal>
+          <p className="eyebrow">02 — Experience</p>
+          <h2 id="experience-title" className="mt-4 text-4xl font-bold md:text-5xl">
+            Professional experience
+          </h2>
+        </Reveal>
+
+        <ol className="mt-14 space-y-6">
           {EXPERIENCE.map((e, i) => (
-            <li key={e.title + e.period} className="relative pb-10 pl-8 last:pb-0">
-              <span className={`absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 bg-white ${i === 0 ? "border-brand" : "border-ink/40"}`} aria-hidden="true" />
-              <Reveal><p className="text-sm font-medium text-muted">{e.period}</p>
-              <h3 className="mt-1 text-2xl font-bold">{e.title}</h3>
-              <p className="font-medium text-brand">{e.company}</p>
-              <p className="mt-2 max-w-2xl text-muted">{e.text}</p></Reveal>
+            <li key={e.role + e.period} className="relative pl-8 md:pl-10">
+              {i < EXPERIENCE.length - 1 && (
+                <span className="absolute left-0 top-2 h-[calc(100%-1.5rem)] w-px bg-line" aria-hidden="true" />
+              )}
+              <span
+                className={`absolute left-[3px] top-1.5 h-3 w-3 rounded-full border-2 border-surface ${i === 0 ? "bg-brand" : "bg-line-strong"}`}
+                aria-hidden="true"
+              />
+              <Reveal delay={i * 80}>
+                <div className="card p-6 transition hover:border-brand/40 md:p-8">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="text-2xl font-bold">{e.role}</h3>
+                        <span className="rounded-full bg-brand-soft px-2.5 py-0.5 font-mono text-xs text-brand">{e.type}</span>
+                      </div>
+                      <p className="mt-1 font-medium text-muted">{e.company} · {e.location}</p>
+                    </div>
+                    <p className="font-mono text-sm text-faint">{e.period}</p>
+                  </div>
+
+                  <p className="mt-4 max-w-2xl text-muted">{e.summary}</p>
+
+                  <ul className={`mt-5 gap-x-8 gap-y-2 ${e.highlights.length > 2 ? "grid sm:grid-cols-2" : "space-y-2"}`}>
+                    {e.highlights.map((h) => (
+                      <li key={h} className="flex gap-3 text-sm leading-relaxed text-muted">
+                        <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden="true" />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
             </li>
           ))}
         </ol>
