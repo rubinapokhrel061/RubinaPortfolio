@@ -6,7 +6,7 @@ export const SITE = {
   phone: "+977 9862122655",
   phoneHref: "tel:+9779862122655",
   github: "https://github.com/rubinapokhrel061",
-  linkedin: "https://www.linkedin.com/in/rubinapokhrel-a85094275",
+  linkedin: "https://www.linkedin.com/in/rubina-pokhrel-a85094275",
   location: "Lalitpur, Nepal",
   company: "BizHub Consulting Service Pvt. Ltd.",
   availability: "Available for international opportunities",
