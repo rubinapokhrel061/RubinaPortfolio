@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Reveal from "./reveal";
+import Section from "./section";
 import { SITE } from "@/data/site";
 
 const field =
-  "w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink placeholder:text-faint focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20";
+  "w-full rounded-lg border border-line bg-surface px-3.5 py-2.5 text-sm text-ink transition placeholder:text-faint focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20";
 
 const contacts = [
   { label: "Email", value: SITE.email, href: `mailto:${SITE.email}` },
@@ -36,63 +38,71 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" aria-labelledby="contact-title" className="section">
-      <div className="container grid gap-14 lg:grid-cols-2 lg:gap-20">
-        <div>
-          <p className="eyebrow">05 — Contact</p>
-          <h2 id="contact-title" className="mt-4 text-4xl font-bold md:text-5xl">
-            Have a product to build? Let&apos;s make it happen.
-          </h2>
-          <p className="mt-5 max-w-md text-lg leading-relaxed text-muted">
-            I&apos;m open to Full Stack and Backend Developer opportunities, international remote roles,
-            and interesting engineering collaborations.
+    <Section
+      id="contact"
+      index="05"
+      label="Contact"
+      title="Let's build your next product."
+      intro="Open to full stack and backend roles, remote work and engineering collaborations."
+    >
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-10">
+        <Reveal>
+          <p className="max-w-md text-base leading-relaxed text-muted">
+            Have a product to build or a role to fill? Send a message and I&apos;ll reply by email — usually within a day.
           </p>
 
-          <ul className="mt-10 space-y-3">
+          <ul className="mt-6 divide-y divide-line border-y border-line">
             {contacts.map((c) => (
               <li key={c.label}>
                 <a
                   href={c.href}
                   target={c.href.startsWith("http") ? "_blank" : undefined}
                   rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="group flex items-center justify-between rounded-xl border border-line bg-surface px-5 py-4 transition hover:border-brand/50"
+                  className="group flex items-center justify-between gap-4 py-3"
                 >
-                  <div>
-                    <p className="font-mono text-xs uppercase tracking-wide text-faint">{c.label}</p>
-                    <p className="mt-0.5 font-medium">{c.value}</p>
-                  </div>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-faint transition group-hover:text-brand" aria-hidden="true">
+                  <span className="flex min-w-0 flex-col">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">{c.label}</span>
+                    <span className="mt-0.5 truncate text-sm font-medium">{c.value}</span>
+                  </span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-faint transition group-hover:text-brand" aria-hidden="true">
                     <path d="M7 17 17 7M7 7h10v10" />
                   </svg>
                 </a>
               </li>
             ))}
           </ul>
-        </div>
 
-        <form onSubmit={onSubmit} className="card h-fit p-6 md:p-8">
-          <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
-          <div>
-            <label htmlFor="name" className="mb-1.5 block text-sm font-semibold">Full name</label>
-            <input id="name" name="name" required autoComplete="name" placeholder="Your name" className={field} />
-          </div>
-          <div className="mt-5">
-            <label htmlFor="email" className="mb-1.5 block text-sm font-semibold">Email address</label>
-            <input id="email" name="email" type="email" required autoComplete="email" placeholder="you@company.com" className={field} />
-          </div>
-          <div className="mt-5">
-            <label htmlFor="message" className="mb-1.5 block text-sm font-semibold">Message</label>
-            <textarea id="message" name="message" rows={5} required minLength={10} placeholder="Tell me about your project or role..." className={`${field} resize-none`} />
-          </div>
-          <button type="submit" disabled={status === "sending"} className="btn btn-primary mt-6 w-full disabled:opacity-60">
-            {status === "sending" ? "Sending..." : "Send message"}
-          </button>
-          <p role="status" aria-live="polite" className={`mt-4 text-sm font-medium ${status === "error" ? "text-brand" : "text-success"}`}>
-            {status === "sent" && "Message sent. I will reply by email soon."}
-            {status === "error" && `Message not sent. Check your connection and try again, or email ${SITE.email}.`}
+          <p className="mt-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
+            <span className="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true" />
+            Based in {SITE.location} · working remotely
           </p>
-        </form>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <form onSubmit={onSubmit} className="card p-5 md:p-6">
+            <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+            <div>
+              <label htmlFor="name" className="mb-1.5 block text-xs font-semibold">Full name</label>
+              <input id="name" name="name" required autoComplete="name" placeholder="Your name" className={field} />
+            </div>
+            <div className="mt-4">
+              <label htmlFor="email" className="mb-1.5 block text-xs font-semibold">Email address</label>
+              <input id="email" name="email" type="email" required autoComplete="email" placeholder="you@company.com" className={field} />
+            </div>
+            <div className="mt-4">
+              <label htmlFor="message" className="mb-1.5 block text-xs font-semibold">Message</label>
+              <textarea id="message" name="message" rows={4} required minLength={10} placeholder="Tell me about your project or role..." className={`${field} resize-none`} />
+            </div>
+            <button type="submit" disabled={status === "sending"} className="btn btn-primary mt-5 w-full disabled:opacity-60">
+              {status === "sending" ? "Sending..." : "Send message"}
+            </button>
+            <p role="status" aria-live="polite" className={`mt-3 text-xs font-medium ${status === "error" ? "text-brand" : "text-success"}`}>
+              {status === "sent" && "Message sent. I will reply by email soon."}
+              {status === "error" && `Message not sent. Check your connection and try again, or email ${SITE.email}.`}
+            </p>
+          </form>
+        </Reveal>
       </div>
-    </section>
+    </Section>
   );
 }

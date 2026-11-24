@@ -40,6 +40,7 @@
   --code-bg: #0b0b10;
   --code-ink: #e6e6ee;
   --shadow-card: 0 1px 2px rgba(16, 16, 24, 0.04), 0 8px 24px -12px rgba(16, 16, 24, 0.12);
+  color-scheme: light;
 }
 
 [data-theme="dark"] {
@@ -61,11 +62,12 @@
   --code-bg: #0b0b10;
   --code-ink: #e6e6ee;
   --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 12px 32px -16px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 4.5rem;
 }
 
 body {
@@ -90,32 +92,31 @@ h1, h2, h3, h4 {
 
 @layer utilities {
   .container { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
-  .section { @apply py-24 md:py-32; }
 
-  .eyebrow { @apply font-mono text-xs font-medium uppercase tracking-[0.22em] text-brand; }
+  .eyebrow { @apply flex items-center gap-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-brand; }
 
-  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition; }
+  .btn { @apply inline-flex items-center justify-center gap-1.5 rounded-lg px-4 py-2.5 text-sm font-semibold transition; }
+  .btn-sm { @apply px-3 py-1.5 text-xs; }
   .btn-primary {
     @apply bg-brand text-white;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 10px 24px -12px var(--glow-brand);
+    box-shadow: 0 10px 24px -14px var(--glow-brand);
   }
   .btn-primary:hover { background: var(--brand-strong); }
   .btn-ghost { @apply border border-line-strong text-ink; }
-  .btn-ghost:hover { border-color: var(--brand); background: var(--brand-soft); color: var(--brand); }
+  .btn-ghost:hover { @apply border-brand text-brand; background: var(--brand-soft); }
 
   .card {
-    @apply rounded-2xl border border-line bg-surface;
+    @apply rounded-xl border border-line bg-surface;
     box-shadow: var(--shadow-card);
   }
 
-  .chip { @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1 text-sm text-muted; }
+  .chip { @apply inline-flex items-center rounded-md border border-line bg-surface px-2 py-0.5 font-mono text-[11px] leading-5 text-muted; }
+  .chip:hover { @apply border-line-strong text-ink; }
 
-  .grid-bg {
-    background-image:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size: 54px 54px;
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 25%, transparent 75%);
+  .dot-bg {
+    background-image: radial-gradient(var(--line-strong) 1px, transparent 1px);
+    background-size: 20px 20px;
+    mask-image: radial-gradient(ellipse 75% 65% at 25% 5%, #000 0%, transparent 72%);
   }
 
   .gradient-text {
@@ -141,20 +142,14 @@ h1, h2, h3, h4 {
   to { transform: translateX(-50%); }
 }
 
-@keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
 @keyframes pulse-soft {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.45; }
 }
 
 .rise { opacity: 0; animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
-.marquee-track { animation: marquee 36s linear infinite; }
+.marquee-track { animation: marquee 42s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-.bob { animation: bob 6s ease-in-out infinite; }
 .status-dot { animation: pulse-soft 2.4s ease-in-out infinite; }
 
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
