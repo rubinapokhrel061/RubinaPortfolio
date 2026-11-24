@@ -74,15 +74,15 @@ export default function Hero() {
               <code>
                 <span className="text-[#71717a]">{"// what I build"}</span>{"\n"}
                 <span className="text-[#c4b5fd]">const</span> <span className="text-[#93c5fd]">stack</span> <span className="text-[#71717a]">=</span> {"{"}{"\n"}
-                {"  "}<span className="text-[#e6e6ee]">frontend:</span> <span className="text-[#86efac]">["React", "Next.js", "TypeScript"]</span>,{"\n"}
-                {"  "}<span className="text-[#e6e6ee]">backend:</span> <span className="text-[#86efac]">["Node.js", "Express", "REST + WebSockets"]</span>,{"\n"}
-                {"  "}<span className="text-[#e6e6ee]">data:</span> <span className="text-[#86efac]">["PostgreSQL", "MongoDB", "Redis"]</span>,{"\n"}
-                {"  "}<span className="text-[#e6e6ee]">queues:</span> <span className="text-[#86efac]">["BullMQ"]</span>,{"\n"}
-                {"  "}<span className="text-[#e6e6ee]">ai:</span> <span className="text-[#86efac]">["OCR", "RAG", "LangChain"]</span>,{"\n"}
+                {"  "}<span className="text-[#e6e6ee]">frontend:</span> <span className="text-[#86efac]">[&quot;React&quot;, &quot;Next.js&quot;, &quot;TypeScript&quot;]</span>,{"\n"}
+                {"  "}<span className="text-[#e6e6ee]">backend:</span> <span className="text-[#86efac]">[&quot;Node.js&quot;, &quot;Express&quot;, &quot;REST + WebSockets&quot;]</span>,{"\n"}
+                {"  "}<span className="text-[#e6e6ee]">data:</span> <span className="text-[#86efac]">[&quot;PostgreSQL&quot;, &quot;MongoDB&quot;, &quot;Redis&quot;]</span>,{"\n"}
+                {"  "}<span className="text-[#e6e6ee]">queues:</span> <span className="text-[#86efac]">[&quot;BullMQ&quot;]</span>,{"\n"}
+                {"  "}<span className="text-[#e6e6ee]">ai:</span> <span className="text-[#86efac]">[&quot;OCR&quot;, &quot;RAG&quot;, &quot;LangChain&quot;]</span>,{"\n"}
                 {"};"}{"\n"}{"\n"}
                 <span className="text-[#71717a]">{"// shipping to production"}</span>{"\n"}
                 <span className="text-[#c4b5fd]">export async function</span> <span className="text-[#fbbf24]">ship</span><span className="text-[#e6e6ee]">(product)</span> {"{"}{"\n"}
-                {"  "}<span className="text-[#c4b5fd]">await</span> <span className="text-[#fbbf24]">integrate</span>({"{"} <span className="text-[#e6e6ee]">erp:</span> <span className="text-[#86efac]">"SAP Business One"</span>, <span className="text-[#e6e6ee]">pay:</span> <span className="text-[#86efac]">"NCHL"</span> {"}"});{"\n"}
+                {"  "}<span className="text-[#c4b5fd]">await</span> <span className="text-[#fbbf24]">integrate</span>({"{"} <span className="text-[#e6e6ee]">erp:</span> <span className="text-[#86efac]">&quot;SAP Business One&quot;</span>, <span className="text-[#e6e6ee]">pay:</span> <span className="text-[#86efac]">&quot;NCHL&quot;</span> {"}"});{"\n"}
                 {"  "}<span className="text-[#c4b5fd]">return</span> <span className="text-[#fbbf24]">deploy</span>(product);{"\n"}
                 {"}"}
               </code>

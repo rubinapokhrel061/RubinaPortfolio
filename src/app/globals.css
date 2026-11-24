@@ -20,29 +20,8 @@
   --color-success: var(--success);
 }
 
-/* Dark-first: the default palette is dark. Light mode is opt-in via data-theme. */
+/* White (light) is the default. Dark is opt-in via data-theme="dark". */
 :root {
-  --bg: #08080a;
-  --surface: #0e0e12;
-  --surface-2: #141419;
-  --ink: #f4f4f6;
-  --muted: #a2a2ae;
-  --faint: #6b6b77;
-  --line: #1e1e27;
-  --line-strong: #2b2b36;
-  --brand: #818cf8;
-  --brand-strong: #a5b4fc;
-  --brand-soft: rgba(129, 140, 248, 0.13);
-  --accent: #a78bfa;
-  --success: #34d399;
-  --glow-brand: rgba(99, 102, 241, 0.22);
-  --glow-accent: rgba(139, 92, 246, 0.18);
-  --code-bg: #0b0b10;
-  --code-ink: #e6e6ee;
-  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 12px 32px -16px rgba(0, 0, 0, 0.6);
-}
-
-[data-theme="light"] {
   --bg: #fafafa;
   --surface: #ffffff;
   --surface-2: #f4f4f6;
@@ -61,6 +40,27 @@
   --code-bg: #0b0b10;
   --code-ink: #e6e6ee;
   --shadow-card: 0 1px 2px rgba(16, 16, 24, 0.04), 0 8px 24px -12px rgba(16, 16, 24, 0.12);
+}
+
+[data-theme="dark"] {
+  --bg: #08080a;
+  --surface: #0e0e12;
+  --surface-2: #141419;
+  --ink: #f4f4f6;
+  --muted: #a2a2ae;
+  --faint: #6b6b77;
+  --line: #1e1e27;
+  --line-strong: #2b2b36;
+  --brand: #818cf8;
+  --brand-strong: #a5b4fc;
+  --brand-soft: rgba(129, 140, 248, 0.13);
+  --accent: #a78bfa;
+  --success: #34d399;
+  --glow-brand: rgba(99, 102, 241, 0.22);
+  --glow-accent: rgba(139, 92, 246, 0.18);
+  --code-bg: #0b0b10;
+  --code-ink: #e6e6ee;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 12px 32px -16px rgba(0, 0, 0, 0.6);
 }
 
 html {
